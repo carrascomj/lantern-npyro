@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Setup rye
-      run: curl -LsSf https://astral.sh/ruff/install.sh | sh
+    - uses: eifinger/setup-rye@v4
+      id: setup-rye
     - name: Setup dependencies
-      run: rye sync
+      run: rye sync --no-lock
     - name: Run pytest
       run: rye run pytest

@@ -133,25 +133,3 @@ def sim_2d(seed, p=5):
     y = f[:N] + dist.Normal(jnp.zeros(N), 1.0).rsample(rng) * 0.05
 
     return W, X, z, y, Z, f[N:]
-
-if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-    p = 5
-
-    W, X, z, y, Z, f = sim_2d(100, p=p)
-
-    plt.figure(figsize=(4, 3), dpi=300)
-    plt.plot(Z, f)
-    plt.scatter(z[:, 0], y, c="C2", alpha=0.8)
-    plt.scatter(z[:, 1], y, c="C3", alpha=0.8)
-    plt.scatter(z[:, 2], y, c="C4", alpha=0.8)
-    plt.scatter(z[:, 3], y, c="C5", alpha=0.8)
-    plt.scatter(z[:, 4], y, c="C6", alpha=0.8)
-    plt.axvline(0, c="k", ls="--")
-
-    for i in range(p):
-        plt.arrow(0, -.05*i, W[i,0].item(), 0, color=f"C{3+i}", width=0.01)
-
-    plt.ylabel("phenotype")
-    plt.xlabel("$z_1$")
-    plt.show()

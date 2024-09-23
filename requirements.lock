@@ -9,31 +9,19 @@
 #   generate-hashes: false
 
 -e file:.
-contourpy==1.3.0
-    # via matplotlib
-cycler==0.12.1
-    # via matplotlib
-fonttools==4.53.1
-    # via matplotlib
 jax==0.4.33
     # via numpyro
 jaxlib==0.4.33
     # via jax
     # via numpyro
-kiwisolver==1.4.7
-    # via matplotlib
-matplotlib==3.9.2
-    # via lantern-npyro
 ml-dtypes==0.5.0
     # via jax
     # via jaxlib
 multipledispatch==1.0.0
     # via numpyro
 numpy==2.1.1
-    # via contourpy
     # via jax
     # via jaxlib
-    # via matplotlib
     # via ml-dtypes
     # via numpyro
     # via opt-einsum
@@ -42,24 +30,8 @@ numpyro==0.15.3
     # via lantern-npyro
 opt-einsum==3.3.0
     # via jax
-packaging==24.1
-    # via matplotlib
-pillow==10.4.0
-    # via matplotlib
-pyparsing==3.1.4
-    # via matplotlib
-pyqt5==5.15.11
-    # via lantern-npyro
-pyqt5-qt5==5.15.15
-    # via pyqt5
-pyqt5-sip==12.15.0
-    # via pyqt5
-python-dateutil==2.9.0.post0
-    # via matplotlib
 scipy==1.14.1
     # via jax
     # via jaxlib
-six==1.16.0
-    # via python-dateutil
 tqdm==4.66.5
     # via numpyro
